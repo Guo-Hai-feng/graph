@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
+#include<stdlib.h>
 #include<malloc.h>
 #define MVNum 100						//最大顶点数
 #define MaxInt 32767					//表示极大值
@@ -14,7 +15,6 @@ typedef struct
 }AMGraph;
 
 
-
 //弧的节点结构
 typedef struct ArcNode
 {
@@ -22,7 +22,6 @@ typedef struct ArcNode
 	ArcType info;//信息域，存放权值
 	struct ArcNode* nextarc;//指向下一条顶点信息
 }ArcNode;
-
 
 //顶点的节点结构
 typedef struct VNode
