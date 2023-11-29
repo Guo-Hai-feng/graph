@@ -1,5 +1,4 @@
 #include"graph.h"
-
 int LocateVex2(ALGraph *G, VerTexType V1)
 {
 	for (int i = 0; i < G->vexnum; i++)
@@ -11,7 +10,7 @@ int LocateVex2(ALGraph *G, VerTexType V1)
 	}
 	return -1;
 }
-int CreateUDG(ALGraph* G)
+int CreateUDG2(ALGraph* G)
 {
 	int num1, num2;
 	scanf("%d,%d", &num1, &num2);//输入总顶点数，总边数

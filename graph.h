@@ -1,5 +1,6 @@
 #define _CRT_SECURE_NO__WARNINGS
 #include<stdio.h>
+#include<malloc.h>
 #define MVNum 100						//最大顶点数
 #define MaxInt 32767					//表示极大值
 #define OK 1
@@ -12,7 +13,12 @@ typedef struct
 	int vexnum, arcnum;					//图的当前点数和边数
 }AMGraph;
 
-//边节点的定义
+int LocateVex(AMGraph* G, VerTexType V1);
+int CreateUDN(AMGraph* G);
+
+
+
+//弧的节点结构
 typedef struct ArcNode
 {
 	int adjvex;//该边所指向的顶点位置
@@ -20,6 +26,8 @@ typedef struct ArcNode
 	struct ArcNode* nextarc;//指向下一条顶点信息
 }ArcNode;
 
+
+//顶点的节点结构
 typedef struct VNode
 {
 	VerTexType data;//定点信息
@@ -27,11 +35,14 @@ typedef struct VNode
 
 }VNode,AdjList[MVNum];
 
+//定义邻接表
 typedef struct
 {
 	AdjList vertices;//vertices--vertice的复数，表示邻接表数组
 	int vexnum,arcnum;//图的当前顶点和弧数
 }ALGraph;
-int CreateUDG(ALGraph* G);
-int LocateVex(AMGraph* G, VerTexType V1);
-int CreateUDN(AMGraph* G);
+
+int CreateUDG2(ALGraph* G);
+int LocateVex2(ALGraph* G, VerTexType V1);
+
+
