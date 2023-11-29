@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include"graph.h"
 int LocateVex(AMGraph *G, VerTexType V1)
 {

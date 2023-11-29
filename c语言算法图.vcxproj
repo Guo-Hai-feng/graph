@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BFS.c" />
-    <ClInclude Include="DFS.c" />
     <ClInclude Include="graph.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AMGraph.c" />
+    <ClCompile Include="BFS.c" />
+    <ClCompile Include="DFS.c" />
     <ClCompile Include="邻接表.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

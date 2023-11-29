@@ -1,9 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include"graph.h"
 void DFS(AMGraph G, int v)//图为邻接矩阵类型
 {
 	//构建辅助数组
 	int size = G.vexnum + 1;
 	int* visited = (int*)malloc(size * sizeof(int));
+	if (visited == NULL)
+	{
+		printf("malloc err");
+		return;
+	}
 	for (int i = 0; i < size; i++)
 	{
 		visited[i] = 0;

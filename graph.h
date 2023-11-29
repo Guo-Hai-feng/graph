@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO__WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 #include<malloc.h>
 #define MVNum 100						//最大顶点数
@@ -12,9 +12,6 @@ typedef struct
 	ArcType arcs[MVNum][MVNum];			//邻接矩阵
 	int vexnum, arcnum;					//图的当前点数和边数
 }AMGraph;
-
-int LocateVex(AMGraph* G, VerTexType V1);
-int CreateUDN(AMGraph* G);
 
 
 
@@ -44,5 +41,8 @@ typedef struct
 
 int CreateUDG2(ALGraph* G);
 int LocateVex2(ALGraph* G, VerTexType V1);
+int LocateVex(AMGraph* G, VerTexType V1);
+int CreateUDN(AMGraph* G);
+void DFS(AMGraph G, int v);//图为邻接矩阵类型
 
 
